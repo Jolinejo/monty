@@ -19,7 +19,7 @@ int arguments(char **buffer, char **av)
 		num++;
 	}
 	av[num] = NULL;
-	if (av[0][0] == '#')
+	if (av[0] != NULL && av[0][0] == '#')
 		av[0] = NULL;
 	return (0);
 }
