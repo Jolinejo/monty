@@ -11,6 +11,7 @@ void push(stack_t **head, unsigned int line_number)
 	stack_t *new;
 	int n, i = 0;
 
+	(void)head;
 	if (glob.av[1] == NULL || glob.av[1][0] == '\0')
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
@@ -35,17 +36,10 @@ void push(stack_t **head, unsigned int line_number)
 		i++;
 	}
 	n = atoi(glob.av[1]);
-	new->n = n;
-	new->prev = NULL;
-	if (*head == NULL)
-	{
-		new->next = NULL;
-		*head = new;
-		return;
-	}
-	new->next = *head;
-	(*head)->prev = new;
-	*head = new;
+	if (glob.mod == 1)
+		pushs(&new, n);
+	else
+		pushq(&new, n);
 }
 /**
  * pall - Entry point
