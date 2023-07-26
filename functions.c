@@ -22,6 +22,8 @@ void push(stack_t **head, unsigned int line_number)
 		fprintf(stderr, "Error: malloc failed\n");
 		safe_exit(EXIT_FAILURE);
 	}
+	if (glob.av[1][0] == '-')
+		i++;
 	while (glob.av[1][i])
 	{
 		if (glob.av[1][i] < '0' || glob.av[1][i] > '9')
