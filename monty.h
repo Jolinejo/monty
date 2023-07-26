@@ -65,4 +65,8 @@ void mul(stack_t **head, unsigned int line_number);
 void modu(stack_t **head, unsigned int line_number);
 void pchar(stack_t **head, unsigned int line_number);
 void pstr(stack_t **head, unsigned int line_number);
+void rotl(stack_t **head, unsigned int line_number);
+
+void pushq(stack_t **newt, int n);
+void pushs(stack_t **newt, int n);
 #endif

@@ -65,3 +65,25 @@ void pstr(stack_t **head, unsigned int line_number)
 	}
 	printf("\n");
 }
+/**
+ * rotl - Entry point
+ * Description: print
+ * @head: head
+ * @line_number: line
+ * Return: int
+ */
+void rotl(stack_t **head, unsigned int line_number)
+{
+	stack_t *new;
+
+	if (*head == NULL || (*head)->next == NULL)
+		return;
+	new = malloc(sizeof(stack_t));
+	if (new == NULL)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		safe_exit(EXIT_FAILURE);
+	}
+	pushq(&new, (*head)->n);
+	pop(head, line_number);
+}
