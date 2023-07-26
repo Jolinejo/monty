@@ -45,3 +45,24 @@ void pchar(stack_t **head, unsigned int line_number)
 	}
 	printf("%c\n", (*head)->n);
 }
+/**
+ * pstr - Entry point
+ * Description: print
+ * @head: head
+ * @line_number: line
+ * Return: int
+ */
+void pstr(stack_t **head, unsigned int line_number)
+{
+
+	stack_t *temp = *head;
+
+	(void)line_number;
+	if (*head == NULL)
+		return;
+	while (temp != NULL && temp->n >= 32 && temp->n < 127)
+	{
+		printf("%d\n", temp->n);
+		temp = temp->next;
+	}
+}
