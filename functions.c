@@ -84,3 +84,25 @@ void pint(stack_t **head, unsigned int line_number)
 	}
 	printf("%d\n", (*head)->n);
 }
+/**
+ * pop - Entry point
+ * Description: print
+ * @head: head
+ * @line_number: number
+ * Return: int
+ */
+void pop(stack_t **head, unsigned int line_number)
+{
+	stack_t *temp;
+
+	if (*head == NULL)
+	{
+		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
+		safe_exit(EXIT_FAILURE);
+	}
+	temp = (*head)->next;
+	if (temp != NULL)
+		temp->prev = NULL;
+	free(*head);
+	*head = temp;
+}
