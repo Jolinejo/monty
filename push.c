@@ -44,3 +44,17 @@ void pushq(stack_t **newt, int n)
 	temp->next = (*newt);
 	(*newt)->prev = temp;
 }
+int del_tail(void)
+{
+	stack_t *temp = glob.head;
+	int num;
+
+	while(temp->next != NULL)
+	{
+		temp = temp->next;
+	}
+	temp->prev->next = NULL;
+	num = temp->n;
+	free(temp);
+	return (num);
+}

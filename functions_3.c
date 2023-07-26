@@ -87,3 +87,25 @@ void rotl(stack_t **head, unsigned int line_number)
 	pushq(&new, (*head)->n);
 	pop(head, line_number);
 }
+/**
+ * rotr - Entry point
+ * Description: print
+ * @head: head
+ * @line_number: line
+ * Return: int
+ */
+void rotr(stack_t **head, unsigned int line_number)
+{
+	stack_t *new;
+	
+	(void)line_number;
+	if (*head == NULL || (*head)->next == NULL)
+		return;
+	new = malloc(sizeof(stack_t));
+	if (new == NULL)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		safe_exit(EXIT_FAILURE);
+	}
+	pushs(&new, del_tail());
+}
