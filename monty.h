@@ -44,6 +44,7 @@ typedef struct global_vars
 	char *av[20];
 	FILE *fp;
 	char *line;
+	int mod;
 } globals;
 
 extern globals glob;

@@ -1,7 +1,7 @@
 #define _GNU_SOURCE
 #include "monty.h"
 void nothing(void);
-globals glob = {NULL, {NULL}, NULL, NULL};
+globals glob = {NULL, {NULL}, NULL, NULL, 1};
 
 /**
  * main - Entry point
