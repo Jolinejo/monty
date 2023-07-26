@@ -52,13 +52,13 @@ void sub(stack_t **head, unsigned int line_number)
 	(*head)->n = temp;
 }
 /**
- * div - Entry point
+ * divide - Entry point
  * Description: print
  * @head: head
  * @line_number: number
  * Return: int
  */
-void div(stack_t **head, unsigned int line_number)
+void divide(stack_t **head, unsigned int line_number)
 {
 	int temp;
 
