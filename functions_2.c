@@ -19,3 +19,15 @@ void add(stack_t **head, unsigned int line_number)
 	pop(head, line_number);
 	(*head)->n = temp;
 }
+/**
+ * nop - Entry point
+ * Description: print
+ * @head: head
+ * @line_number: number
+ * Return: int
+ */
+void nop(stack_t **head, unsigned int line_number)
+{
+	(void)head;
+	(void)line_number;
+}
