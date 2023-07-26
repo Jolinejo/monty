@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 			p = get_op_func(glob.av[0]);
 			if (p == NULL)
 			{
-				dprintf(2, "L%u: unknown instruction %s", line_num, glob.av[0]);
+				dprintf(2, "L%u: unknown instruction %s\n", line_num, glob.av[0]);
 				safe_exit(EXIT_FAILURE);
 			}
 			p(&(glob.head), line_num);
