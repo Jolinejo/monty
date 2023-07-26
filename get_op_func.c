@@ -20,6 +20,6 @@ void (*get_op_func(char *s))(stack_t**, unsigned int)
 			return (ops[i].f);
 		i++;
 	}
-	
+
 	return (NULL);
 }

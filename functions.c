@@ -47,7 +47,8 @@ void push(stack_t **head, unsigned int line_number)
 /**
  * pall - Entry point
  * Description: print
- * @h: head
+ * @head: head
+ * @line_number: line
  * Return: int
  */
 void pall(stack_t **head, unsigned int line_number)

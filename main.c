@@ -1,11 +1,13 @@
 #define _GNU_SOURCE
 #include "monty.h"
-/*void nothing(void);*/
+void nothing(void);
 globals glob = {NULL, {NULL}, NULL, NULL};
 
 /**
  * main - Entry point
  * Description: prints line by line no extra spaces
+ * @argc: count
+ * @argv: vars
  * Return: nothing
  */
 int main(int argc, char *argv[])
@@ -14,17 +16,17 @@ int main(int argc, char *argv[])
 	ssize_t read;
 	unsigned int line_num = 1;
 	void (*p)(stack_t**, unsigned int);
-	
+
 	if (argc != 2)
 	{
 		dprintf(2, "USAGE: monty file\n");
-		return(EXIT_FAILURE);
+		return (EXIT_FAILURE);
 	}
 	glob.fp = fopen(argv[1], "r");
 	if (glob.fp == NULL)
 	{
 		dprintf(2, "Error: Can't open file %s\n", argv[1]);
-		return(EXIT_FAILURE);
+		return (EXIT_FAILURE);
 	}
 	while ((read = getline(&(glob.line), &len, glob.fp)) != -1)
 	{
