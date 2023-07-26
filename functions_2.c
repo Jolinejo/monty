@@ -69,7 +69,7 @@ void div(stack_t **head, unsigned int line_number)
 	}
 	if ((*head)->n == 0)
 	{
-		fprintf(stderr, "L%u: division by zero", line_number);
+		fprintf(stderr, "L%u: division by zero\n", line_number);
 		safe_exit(EXIT_FAILURE);
 	}
 	temp = (*head)->next->n / (*head)->n;
