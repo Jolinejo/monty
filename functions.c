@@ -68,4 +68,19 @@ void pall(stack_t **head, unsigned int line_number)
 		temp = temp->next;
 	}
 }
-
+/**
+ * pint - Entry point
+ * Description: print
+ * @head: head
+ * @line_number: number
+ * Return: int
+ */
+void pint(stack_t **head, unsigned int line_number)
+{
+	if (*head == NULL)
+	{
+		fprintf(stderr, "L%u: can't pint, stack empty", line_number);
+		safe_exit(EXIT_FAILURE);
+	}
+	printf("%d\n", (*head)->n);
+}
