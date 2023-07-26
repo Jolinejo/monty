@@ -106,3 +106,24 @@ void pop(stack_t **head, unsigned int line_number)
 	free(*head);
 	*head = temp;
 }
+/**
+ * swap - Entry point
+ * Description: print
+ * @head: head
+ * @line_number: number
+ * Return: int
+ */
+void swap(stack_t **head, unsigned int line_number)
+{
+	int temp;
+
+	if (*head == NULL || (*head)->next == NULL)
+	{
+		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
+		safe_exit(EXIT_FAILURE);
+	}
+	temp = (*head)->n;
+	(*head)->n = (*head)->next->n;
+	(*head)->next->n = temp;
+
+}
