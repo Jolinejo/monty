@@ -27,6 +27,7 @@ void push(stack_t **head, unsigned int line_number)
 		if (glob.av[1][i] < '0' || glob.av[1][i] > '9')
 		{
 			fprintf(stderr, "L%u: usage: push integer", line_number);
+			free(new);
 			safe_exit(EXIT_FAILURE);
 		}
 		i++;
