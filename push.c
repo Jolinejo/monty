@@ -44,6 +44,11 @@ void pushq(stack_t **newt, int n)
 	temp->next = (*newt);
 	(*newt)->prev = temp;
 }
+/**
+ * del_tail - Entry point
+ * Description: print
+ * Return: int
+ */
 int del_tail(void)
 {
 	stack_t *temp = glob.head;
