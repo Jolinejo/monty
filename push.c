@@ -49,7 +49,7 @@ int del_tail(void)
 	stack_t *temp = glob.head;
 	int num;
 
-	while(temp->next != NULL)
+	while (temp->next != NULL)
 	{
 		temp = temp->next;
 	}

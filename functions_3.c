@@ -97,7 +97,7 @@ void rotl(stack_t **head, unsigned int line_number)
 void rotr(stack_t **head, unsigned int line_number)
 {
 	stack_t *new;
-	
+
 	(void)line_number;
 	if (*head == NULL || (*head)->next == NULL)
 		return;
